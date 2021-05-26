@@ -15,7 +15,7 @@ import re                                                                       
 from polyglot.detect import Detector                                                # for detecting entered text's language
 from polyglot.detect.base import logger as polyglot_logger                          # polyglot logger
 polyglot_logger.setLevel("ERROR")                                                   # to ignore warnings from polyglot
-from InputLanguageError import InputLanguageError
+from sanstem.InputLanguageError import InputLanguageError
 import os
 
 class SanskritStemmer:
