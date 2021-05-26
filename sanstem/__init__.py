@@ -1,1 +1,1 @@
-from sanskrit_stemmer.SanskritStemmer import SanskritStemmer
+from sanstem.SanskritStemmer import SanskritStemmer
