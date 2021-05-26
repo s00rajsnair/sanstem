@@ -59,9 +59,9 @@ class SanskritStemmer:
         self.vowels = ['a','e','i','o','u','A','E','I','O','U']     # for reducing over-stemming
         self.dt = DevaTrans()                                       # devatrans object
 
-        verb_suffix_file = open(os.path.join(os.path.abspath('./Data'),'verb_suffixes.csv'), 'r', encoding='utf8')
-        noun_suffix_file = open(os.path.join(os.path.abspath('./Data'),'noun_suffixes.csv'),'r', encoding='utf8')
-        devanagari_file = open(os.path.join(os.path.abspath('./Data'),'devanagari_languages.csv'), 'r', encoding='utf8')
+        verb_suffix_file = open(os.path.join('Data', 'verb_suffixes.csv'), 'r', encoding='utf8')
+        noun_suffix_file = open(os.path.join('Data', 'noun_suffixes.csv'), 'r', encoding='utf8')
+        devanagari_file =  open(os.path.join('Data', 'devanagari_languages.csv'), 'r', encoding='utf8')
 
         self.verb_suffix_list = []
         self.devanagari_language_list = []
@@ -168,3 +168,4 @@ class SanskritStemmer:
         else:
             back_trans = sanskrit_noun                                                  # return the same word in case it was not stemmed
         return back_trans
+
