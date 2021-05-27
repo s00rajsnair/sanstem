@@ -10,6 +10,8 @@ setup(
   url = 'https://github.com/sooraj-nair/sanstem',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/sooraj-nair/sanstem/archive/refs/tags/v0.0.5.tar.gz',  
   keywords = ['Sanskrit', 'Stemmmer','Natural Language Processing'],   # Keywords that define your package best
+  include_package_data=True,
+  package_data={'':['sanstem/Data/*.csv']},
   install_requires=[            # I get to this in a second
           'devatrans',
           'polyglot',
