@@ -60,6 +60,10 @@ class SanskritStemmer:
         self.dt = DevaTrans()                                       # devatrans object
 
         dirname = os.path.dirname(__file__)
+        print(dirname)
+        print(os.getcwd())
+        print(os.path.join(dirname,'Data','noun_suffixes'))
+        print('-----------------')
         verb_suffix_file = open(os.path.join(dirname, 'Data','verb_suffixes.csv'), 'r', encoding='utf8')
         noun_suffix_file = open(os.path.join(dirname, 'Data','noun_suffixes.csv'), 'r', encoding='utf8')
         devanagari_file =  open(os.path.join(dirname, 'Data','devanagari_languages.csv'), 'r', encoding='utf8')
