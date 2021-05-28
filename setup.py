@@ -1,21 +1,25 @@
-from distutils.core import setup
+from setuptools import setup
+import os
+
+def read(fname):
+  return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 setup(
-  name = 'sanstem',         # How you named your package folder (MyLib)
-  packages = ['sanstem'],   # Chose the same as "name"
-  version = '0.0.6',      # Start with a small number and increase it with every change you make
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'A rule-based stemmer for Sanskrit Verbs and Nouns',   # Give a short description about your library
-  author = 'Sooraj S Nair',                   # Type in your name
-  author_email = 'soorajsnair@am.students.amrita.edu',      # Type in your E-Mail
-  url = 'https://github.com/sooraj-nair/sanstem',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/sooraj-nair/sanstem/archive/refs/tags/v0.0.6.tar.gz',  
-  keywords = ['Sanskrit', 'Stemmmer','Natural Language Processing'],   # Keywords that define your package best
-  include_package_data=True,
-  package_data={'':['sanstem/Data/*.csv']},
+  name="sanstem",
+  version="0.0.7",
+  author="Sooraj S Nair",
+  author_email="soorajsnair@am.students.amrita.edu",
+  description=("A rule-based stemmer for Sanskrit Verbs and Nouns'"),
+  license="MIT",
+  keywords="Sanskrit Stemmer",
+  url="https://github.com/sooraj-nair/sanstem",
+  packages=['sanstem'],
+  long_description=read('README'),
   install_requires=[            # I get to this in a second
           'devatrans',
           'polyglot',
-      ],
+  ],
+  include_package_Data=True,
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Developers',      # Define that your audience are developers
