@@ -1,8 +1,9 @@
 from setuptools import setup
-import os
+import pathlib
 
-def read(fname):
-  return open(os.path.join(os.path.dirname(__file__), fname)).read()
+HERE = pathlib.Path(__file__).parent
+
+README = (HERE / "README.md").read_text()
 
 setup(
   name="sanstem",
@@ -14,7 +15,7 @@ setup(
   keywords="Sanskrit Stemmer",
   url="https://github.com/sooraj-nair/sanstem",
   packages=['sanstem'],
-  long_description=read('README'),
+  long_description=README,
   install_requires=[            # I get to this in a second
           'devatrans',
           'polyglot',
