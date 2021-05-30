@@ -14,13 +14,13 @@ Sanstem is a tool used for **stemming** Sanskrit Verbs and Nouns. Stemming is a 
 	stemmer = SanskritStemmer()
 
 ##### Stemming a Noun
-    inflected_noun = ' गजेन ' 
+    inflected_noun = 'गजेन' 
     stemmed_noun = stemmer.noun_stem(inflected_noun)
     print(stemmed_noun)
 	# output : गज्
 
 ##### Stemming a Verb
-    inflected_verb = ' गच्छामि '
+    inflected_verb = 'गच्छामि'
     stemmed_verb = stemmer.verb_stem(inflected_verb)
     print(stemmed_verb)
 	# output : गच्छ्

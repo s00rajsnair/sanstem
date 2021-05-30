@@ -8,7 +8,7 @@ README = (HERE / "README.md").read_text()
 setup(
 
   name="sanstem",
-  version="1.0",
+  version="1.0.2",
   author="Sooraj S Nair",
   author_email="nairsooraj2000@gmail.com",
   description=("A rule-based stemmer for Sanskrit Verbs and Nouns"),
@@ -23,6 +23,9 @@ setup(
   install_requires=[            
           'devatrans',
           'polyglot',
+          'pyicu',
+          'pycld2',
+          'morfessor',
   ],
   
   include_package_Data=True,
